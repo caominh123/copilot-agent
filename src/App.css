@@ -18,7 +18,8 @@
   padding: 2rem;
   text-align: center;
   min-height: 100vh;
-  background: var(--background-color);
+  background: linear-gradient(135deg, var(--background-color) 0%, #eef2ff 100%);
+  color-scheme: light dark;
 }
 
 .app {
@@ -200,4 +201,64 @@
 
 .delete-button:active {
   transform: translateY(0);
+}
+
+.todo-filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.filter-button {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.filter-button:hover {
+  background: rgba(79, 70, 229, 0.1);
+  color: var(--primary-color);
+}
+
+.filter-button.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.todo-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-light);
+  font-size: 0.875rem;
+}
+
+.clear-completed {
+  background: transparent;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.clear-completed:hover {
+  color: var(--delete-color);
+  background: rgba(239, 68, 68, 0.1);
 }
